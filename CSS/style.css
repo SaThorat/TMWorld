@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
   }
   .top-section {
-    background-color: #e2d7d7f2;
+    background-color: #7fd3d74f;
     text-align: center;
     color: #090000;
     padding: 20px 0;
@@ -17,9 +17,9 @@ body {
     align-items: center;
   }
   .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border-radius: 70%;
     margin-right: 20px;
   }
   .name {
