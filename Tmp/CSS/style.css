@@ -16,42 +16,29 @@ body {
     display: flex;
     align-items: center;
   }
-  .profile-pic-container {
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
     margin-right: 20px;
   }
-  .profile-pic {
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-  }
-  .name-info {
-    display: flex;
-    flex-direction: column;
-  }
   .name {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
-    margin-bottom: 5px;
   }
   .designation {
-    font-size: 18px;
+    font-size: 24px;
     color: #777;
   }
   a{
     text-decoration: none;
   }
-  h1{
-    color: blue;
-    text-align: center;
-  }
-  h2, h3{
+  h2{
     text-align: center;
     font-family: initial;
     font-size: 35px;
-    color: #ee2727;
   }
   p{
-    padding: 10px;
     text-align: justify;
     font-family: cursive;
   }
@@ -65,11 +52,10 @@ body {
   .left-section, .middle-section, .right-section {
     padding: 20px;
     box-sizing: border-box;
-    /* background-color: #d3b2b2; */
   }
   .left-section, .right-section {
     flex-basis: 20%;
-    /* background-color: #f0f0f0; */
+    background-color: #f0f0f0;
   }
   .middle-section {
     flex-basis: 60%;
