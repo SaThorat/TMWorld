@@ -84,3 +84,8 @@ body {
   .bottom-section p{
     text-align: center;
   }
+  strong{
+    font-family: initial;
+    font-size: 20px;
+    color: #ee2727;
+  }
