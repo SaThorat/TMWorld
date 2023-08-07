@@ -13,7 +13,7 @@ body {
     justify-content: center;
   }
   table{
-    /* align-self: center; */
+    align-self: center; 
     margin: auto;
   }
   table, tr, td, th{
