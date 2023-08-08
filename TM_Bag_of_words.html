@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bag of Words</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <h1>Bag of Words</h1>
+    <p>For any language the words are considered as the basic building block of that language which gives the meaning to
+        the sentence and sometimes forms the complex structure. But what if we can ignore the structure of sentence and
+        can focused on only the word, that’s where the concept of bag of words comes in to picture, a bag where you can
+        place any word without worrying about grammar or order.</p>
+
+    <h2>Why bag-of-words algorithm used?</h2>
+    <p>The bag of words is used for various tasks such as sentiment analysis, text classification, training machines to
+        understand human language and topic modelling. By comparing the bag of words representations of different texts,
+        we can identify similarities and differences between the documents.
+        The biggest problem with text data is that it is always unstructured and messy. Computers and machine learning
+        algorithm prefer structured and well defined inputs and by using bag of words technique we can convert variable
+        length, unstructured text into fixed length vector. Also the machine learning models work with numerical data
+        rather than textual data. So to be more specific, by using the bag of words technique, we convert a text into
+        its equivalent vector of numbers.
+    </p>
+
+    <h2>Important Concepts/Ideas:</h2>
+    <ol>
+        <li><strong>Collection of Words:</strong>
+            <p>In the bag of words, text is broken down into individual words or tokens. These words are considered the
+                fundamental units of analysis.</p>
+        </li>
+        <li><strong>Disregard for Order:</strong>
+            <p>The bag of words doesn't concern itself with the sequence or arrangement of words in a sentence. It
+                treats every word as an isolated entity.</p>
+        </li>
+        <li><strong>Text Pre-processing: </strong>
+            <p> Before creating the bag of words, text preprocessing is often performed. This involves tasks like
+                converting text to lowercase, removing punctuation, and eliminating common words (stop words) that don't
+                contribute much meaning.</p>
+        </li>
+        <li><strong>Counting Occurrences: </strong>
+            <p> The core idea is to count how many times each word appears in the text. This count is used to build a
+                representation of the text's content. Term Frequency (TF) is the count of how often a word appears in a
+                specific document. It helps to identify the important words in each document</p>
+        </li>
+        <li><strong>Building a Vocabulary:</strong>
+            <p> The unique words in the entire dataset make up the vocabulary. Each word becomes a "feature" in the bag
+                of words representation.</p>
+        </li>
+        <li><strong>Sparse Representation:</strong>
+            <p>The bag of words representation often results in a sparse matrix, where most elements are zeros. This is
+                because each document will only have a small subset of the entire vocabulary. </p>
+        </li>
+        <li><strong>Loss of Context: </strong>
+            <p>A limitation of the bag of words is that it discards the context in which words appear. It treats each
+                word in isolation, potentially missing out on the meaning that arises from word relationships. </p>
+        </li>
+        <li><strong>Evolution to Advanced Models: </strong>
+            <p>While the bag of words is a simple and effective starting point, more advanced techniques like TF-IDF
+                (Term Frequency-Inverse Document Frequency) and word embedding’s have been developed to capture context
+                and meaning better. </p>
+        </li>
+        <li><strong>Scalability:</strong>
+            <p>The bag of words technique can be applied to large datasets and is relatively straightforward to
+                implement, making it a scalable approach for text analysis </p>
+        </li>
+    </ol>
+
+
+    <h2>Creating Bag of words </h2>
+    <p> For creating bag of words from given textual data following steps are followed :</p>
+
+    <ol>
+        <li><strong>Collection :</strong>
+            <p>we gather the data that we want to analyze ti can be articles reviews or just collection of sentences</p>
+        </li>
+        <li><strong>Pre-processing:</strong>
+            <p>The bag of words doesn't concern itself with the sequence or arrangement of words in a sentence. It
+                treats every word as an isolated entity.</p>
+        </li>
+        <li><strong>Building Vocabulary :</strong>
+            <p>We create a list of unique words across data set where each word becomes feature of data set.</p>
+        </li>
+        <li>
+            <strong>Word Counting: </strong>
+                <p>for each document, count the frequency of each word.</p>
+        </li>
+        <li>
+            <strong>Constructing Bag: </strong>
+                <p> a matrix where each row corresponds to documents and columns corresponds to
+                words and fill the matrix with word count</p>
+        </li>
+    </ol>
+    <h3>Link for the Git Code :</h3>
+    <ul>
+        <li><a href="https://github.com/SaThorat/TMCodes/blob/main/BagofWords.ipynb"
+                target="_blank">https://github.com/SaThorat/TMCodes/blob/main/BagofWords.ipynb</a>
+        </li>
+    </ul>
+    <h3>References:</h3>
+    <ul>
+        <li><a href="https://www.kaggle.com/code/vipulgandhi/bag-of-words-model-for-beginners"
+                target="_blank">https://www.kaggle.com/code/vipulgandhi/bag-of-words-model-for-beginners</a>
+        </li>
+        <li><a href="https://www.engati.com/glossary/bag-of-words"
+                target="_blank">https://www.engati.com/glossary/bag-of-words</a>
+        </li>
+        <li><a href="https://en.wikipedia.org/wiki/Bag-of-words_model"
+                target="_blank">https://en.wikipedia.org/wiki/Bag-of-words_model</a></li>
+        <li><a href="https://www.mygreatlearning.com/blog/bag-of-words/"
+                target="_blank">https://www.mygreatlearning.com/blog/bag-of-words/</a></li>
+    </ul>
+    <h3>Contributed by:</h3>
+    <ul>
+        <li><a href="https://github.com/SaThorat" target="_blank">Dr. Sandeep Thorat</a></li>
+        <li><a href="https://github.com/PiyushM109" target="_blank">Mr. Piyush More</a></li>
+    </ul>
+    <p style="text-align: end; color: black; font-size: large;"><a href="textMining.html" target="middleFrame">Go
+            back</a></p>
+</body>
+
+</html>
