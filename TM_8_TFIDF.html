@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TF-IDF Explanation</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <h1>TF-IDF — Term Frequency-Inverse Document Frequency</h1>
+
+  <p>TF-IDF is a short form of two related concepts which are used in the field of text mining and processing. First term TF is called the ‘Term Frequency’ and the second one is called the ‘Inverse Document frequency’. These two in combination give us the importance or relevance of the word in a sentence or sentence in the whole document. For successful implementation of these concepts into any text processing we need to have the frequency of each term in the document as well as outside of the document which can be calculated using a simple dictionary.</p>
+
+  <h2>TF (Term Frequency)</h2>
+  <p>Term frequency as the name suggests is related to the count of the particular term in the document. The words which are remaining after the removal of stop-words from the given sentence or the document are parsed to any function where we can calculate the number of occurrences of a particular word in the sentence. After we get the actual number or the actual count of every word in the document then it can be used to get the frequency of the term or in simple words it can be used to find the frequency of words in the document.<br>
+  As we all know, to calculate the frequency of the term we divide the actual count by the total count of all the combined entities. This is also true when it comes to term-frequency. Term frequency of any particular term mathematically can be defined as the count of that term in the document divided by the total number of terms in the given document. It can be expressed mathematically as:</p>
+  <p><em>Term Frequency = (Count of the term) / (Total number of all the terms)</em></p>
+
+  <h2>IDF (Inverse Document Frequency)</h2>
+  <p>This concept is used to calculate relative importance of words across each of the documents in the whole corpus. Here there has to be consideration of each of the documents where the term which we are looking for is and then total number of such documents. This will lead us to a certain number of which we have to take log off. Mathematically IDF is defined as the log of “Total number of documents in the corpus divided by the number of documents which has that mentioned term in it”. If we try to formulate it in the mathematical way it can be done in the following way.</p>
+  <p><em>IDF = log (Number of document in the corpus / Number of document where that term lies)</em></p>
+
+  <h2>Calculating TF-IDF</h2>
+  <p>Now as we have found the values of TF and then IDF it is that time where we can find the TF-IDF score of a particular term in the documents. The TF-IDF score is a combination of both the term frequency and also inverse document frequency. Mathematically it can be calculated using multiplication of TF and IDF. Hence we can formulate the TF-IDF as:</p>
+  <p><em>TF-IDF = (TF * IDF)</em></p>
+
+  <h2>Code Example</h2>
+  <p>The code example has been explained on the Jupyter Notebook with the same example as above. Link for the notebook is given below:<br>
+  <a href="https://github.com/SaThorat/TMCodes/blob/main/TF_IDF.ipynb">TF - IDF code sample</a></p>
+</body>
+</html>
