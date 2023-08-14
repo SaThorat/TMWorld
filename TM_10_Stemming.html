@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stemming and Lemmatization</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <h1>Stemming and Lemmatization</h1>
+    <p>In natural language, the same word can have different forms (e.g. running, run, ran). Hence, to make machines and algorithms understand these words, we have to convert them into their root form. This is the role of stemming and lemmatization. All words will be converted to their root form if they are not already in the root form.</p>
+
+    <h2>Stemming:</h2>
+    <p>Stemming is a natural language processing (NLP) technique used to reduce words to their base or root form. The main idea behind stemming is to remove prefixes, suffixes, and other affixes from words in order to obtain a common form that represents a group of related words. This helps in reducing variations of words and makes it easier to analyze and process text data.</p>
+    <p>Consider the word ‘running’. This word is formed from a root word which we know as ‘run’. There can be another sentence or text document where this word will be mentioned in another form. To make the machine understand that word it is converted into its root form. Stemming is a method which is used to convert the word into its root form.</p>
+    <p>However, it's important to note that stemming is a heuristic approach and can sometimes result in incorrect stems. For instance, the word "flies" might be stemmed to "fli," but a more accurate base form would be "fly." This is where more advanced techniques like lemmatization come into play.</p>
+    <p>Example:</p>
+    <ul>
+        <li>Original Word: "running" - Stemmed Word: "run"</li>
+        <li>Original Word: "flies" - Stemmed Word: "fli" (Note: "fli" is not a valid word)</li>
+    </ul>
+
+    <h2>Lemmatization:</h2>
+    <p>Lemmatization is a natural language processing (NLP) technique that involves reducing words to their base or dictionary form, known as a "lemma." Unlike stemming, which simply removes prefixes and suffixes to obtain a truncated form of a word, lemmatization considers the word's context and part of speech, resulting in a more accurate and linguistically meaningful base form.</p>
+    <p>The main goal of lemmatization is to transform different inflected forms of a word to a common root, ensuring that words with the same core meaning are represented consistently. Lemmatization is particularly useful in tasks that require a deeper understanding of language, such as machine translation, question answering, and sentiment analysis, where preserving the semantic and grammatical integrity of words is crucial.</p>
+    <p>Lemmatization Example:</p>
+    <ul>
+        <li>Original Word: "better" - Lemma: "good"</li>
+        <li>Original Word: "running" - Lemma: "run"</li>
+    </ul>
+
+    <h3>Link of git code for demonstration of Stemming and Lemmatization:</h3>
+    <ul>
+        <li><a href="https://github.com/SaThorat/TMCodes/blob/main/Stemming%20and%20lemmatization.ipynb "
+                target="_blank">https://github.com/SaThorat/TMCodes/blob/main/Stemming%20and%20lemmatization.ipynb </a>
+        </li>
+    </ul>
+
+    <h2>References:</h2>
+    <ul>
+        <li><a href="https://www.analyticsvidhya.com/blog/2022/06/stemming-vs-lemmatization-in-nlp-must-know-differences/#:~:text=Stemming%20is%20a%20process%20that,form%2C%20which%20is%20called%20Lemma." target="_blank">https://www.analyticsvidhya.com</a></li>
+        <li><a href="https://www.tutorialspoint.com/natural_language_toolkit/natural_language_toolkit_stemming_lemmatization.htm" target="_blank">https://www.tutorialspoint.com</a></li>
+    </ul>
+
+    <p>Contributed by:</p>
+    <ul>
+        <li><a href="https://github.com/SaThorat" target="_blank">Dr. Sandeep Thorat</a></li>
+		<li><a href="https://github.com/rk-3131" target="_blank">Mr. Radhakrushna Mahadik</a></li>
+    </ul>
+</body>
+</html>
