@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Named Entity Recognition </title>
+	<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+	<h1>Named Entity Recognition </h1>
+    <strong> 1. What is Named Entity Recognition?</strong>
+    <p>Named-entity recognition (NER) is a subtask of information extraction that seeks to locate and classify named entities mentioned in unstructured text into pre-defined categories such as person names, organizations, locations, medical codes, time expressions, quantities, percentages, etc<br>
+    NER also known as (named) entity identification, entity chunking, and entity extraction).<a href="#4">[4]</a></p>
+    <b>Named-entity recognition is  two-step process :</b>
+    <p>1.	Detection of the names:
+    <br>Detecting an entity or keyword from the given input text. The entity can be a word or a group of words</p>
+    <p>2.	Classification of the names :<br>
+    Creation of entity categories such as person, Organization, Time, date, Location, percentage, money etc. and you can also create your own categories.</p>
+    <p>Good training data is essential for a model to categorize detected entities into a relevant predetermined entity. Therefore, it’s vital to train the model correctly on suitable data.
+    <a href="#3">[3]</a></p>
+
+    <strong>2. What are the Methods of Named Entity Recognition?</strong><br>
+    <p><b>Methods of Named Entity Recognition:</b></p>
+    <h4>1. Dictionary-based :</h4>
+    <p>In this approach, a dictionary containing vocabulary is used. Basic string-matching algorithms check whether the entity is present in the given text against the items in the vocabulary</p>
+    <h4>2. Rule-based</h4>
+    <p>In this method, a predefined set of rules for information extraction is used which are pattern-based and context-based.  Pattern-based rule uses the morphological pattern of the words while context-based uses the context of the word given in the text document.</p>
+    <h4>3. Machine learning-based</h4>
+    <p>It is a statistical-based model that tries to make a feature-based representation of the observed data. It can recognize an existing entity name even with small spelling variations.<br>
+    <b>Two Phases:</b><br>
+    1. Train the ML model on annotated Documents<br>
+    2.	Trained model is used to annotate the raw documents</p>
+    <h4>4. Deep learning-based</h4>
+    <p>Deep learning based NER possesses the ability to bring words together, enhancing its comprehension of the semantic and syntactic connections among different words.<br>
+    Furthermore, it has the capacity to automatically analyze words that pertain to specific topics and possess a higher level of meaning.
+    <a href="#2">[2]</a></p>
+    
+    <strong>3. What are the steps involved in algorithm of Named Entity Recognition?</strong>
+    <p>A typically named entity recognition NLP model consists of several subtasks, including:<br>
+        <b>1. Tokenization:</b>Tokenization breaks text into individual tokens (usually words or punctuation marks).<br>
+        <b>2. Part-of-speech tagging: </b>Labelling each token with its corresponding part of speech (e.g., noun, verb, adjective, etc.).<br>
+        <b>3. Chunking: </b>Group tokens into "chunks" based on their part-of-speech tags.<br>
+        <b>4. Name entity recognition: </b>Identifying named entities and classifying them into predefined categories.<br>
+        <b>5. Entity disambiguation: </b>The process of determining the correct meaning of a named entity, especially when multiple entities with the same name are present in the text.
+        <a href="#7">[7]</a>
+    </p>
+
+    <strong>Example:</strong>
+    <p>Sentence :<br>
+        <b>"Mark Zuckerberg founded Facebook in 2004 in Menlo Park, California”</b><br>
+        1.	Tokenize the sentence :<br>
+        ['Mark', 'Zuckerberg', 'founded', 'Facebook', 'in', '2004', 'in', 'Menlo', 'Park', ',', 'California', '.']<br>
+        2.	Part-of-specch Tagging:<br>
+        ['NNP', 'NNP', 'VBD', 'NNP', 'IN', 'CD', 'IN', 'NNP', 'NNP', ',', 'NNP', '.']<br>
+        3.	Chunking:<br>
+        [('Mark', 'NNP'), ('Zuckerberg', 'NNP'), ('founded', 'VBD'), ('Facebook', 'NNP'), ('in', 'IN'), ('2004', 'CD'), ('in', 'IN'), ('Menlo', 'NNP'), ('Park', 'NNP'), (',', ','), ('California', 'NNP'), ('.', '.')]<br>
+        4.	Named Entity Recognition:<br>
+        { ('Mark Zuckerberg', 'PERSON'), ('2004', 'DATE'), ('Menlo Park', 'Location'), ('California', 'Location')}<br>
+        5.	Entity disambiguation :<br>
+         If multiple people have the name "Mark Zuckerberg", we must determine which one is being referred to in the text.<br>
+        </p>
+ 
+    <p><strong>Implementation of Named Entity Recognition model using Spacy:</strong>
+    <br>Link of Git-Code :
+    <a href="https://github.com/SaThorat/TMCodes/blob/main/NER_Using_Spacy.ipynb" target="_blank">https://github.com/SaThorat/TMCodes/blob/main/NER_Using_Spacy.ipynb</a>
+    </p>
+    <p><strong>What are the Benefits and Challenges of NER?</strong><br>
+    Named entity recognition provides a range of advantages when used appropriately:<br>
+    <div style="font-family: cursive;"> 
+    <ol> 
+            <li>Automates the information extraction of large amounts of data.</li>
+            <li>Analyzes key information in unstructured text.</li>
+            <li>Eliminates human error in analysis.</li>
+            <li>Frees up time for employees to perform other tasks.</li>
+            <li>Improves the precision of NLP tasks and processes.</li>
+     </ol>
+    
+    <p>
+    NER also comes with its own range of challenges:
+    <ol>
+        <li>Difficulty in analyzing lexical ambiguities, semantics and evolving usages of language in text.</li>
+        <li>Runs into problems with spelling variations.</li>
+        <li>Doesn't know all foreign words.</li>
+        <li>Can have issues with spoken word text, such as telephone conversations.</li>
+        <li>Leads to many state-of-the-art NER models reporting limited performance measures.</li>
+        <li>Can require large volumes of training data or a lot of human intervention.</li>
+        <li>Runs the risk of exhibiting bias in outcomes if the machine learning algorithm contains underlying biases.<a href="#1">[1]</a></li>
+    </ol> 
+    </p> 
+
+    <strong>What are the named entity recognition applications?</strong>
+    <p>NER is widely used in various NLP tasks. These include:</p>
+    <ol>
+        <li>Efficient search algorithms</li>
+        <li>Content recommendations</li>
+        <li>Customer support</li>
+        <li>Healthcare</li>
+        <li>Summarizing resumes</li>
+        <li>Content classification for news channels.<a href="#5">[5]</a></li>
+    </ol>
+    </div>
+  
+    <h3>References:</h3>
+    <ol>
+        <li><a id=1 href="https://www.techtarget.com/whatis/definition/named-entity-recognition-NER#:~:text=Named%20entity%20recognition%20(NER)%20is,text%20known%20as%20named%20entities." target="_blank">https://www.techtarget.com/whatis/definition/named-entity-recognition-NER#:~:text=Named%20entity%20recognition%20(NER)%20is,text%20known%20as%20named%20entities.</a></li>
+        <li><a id=2 href="https://www.analyticsvidhya.com/blog/2021/11/a-beginners-introduction-to-ner-named-entity-recognition/" target="_blank">https://www.analyticsvidhya.com/blog/2021/11/a-beginners-introduction-to-ner-named-entity-recognition/</a></li>
+        <li><a id=3 href="https://www.turing.com/kb/a-comprehensive-guide-to-named-entity-recognition" target="_blank">https://www.turing.com/kb/a-comprehensive-guide-to-named-entity-recognition</a></li>
+        <li><a id=4 href="https://en.wikipedia.org/wiki/Named-entity_recognition" target="_blank">https://en.wikipedia.org/wiki/Named-entity_recognition</a></li>
+        <li><a id=5 href="https://medium.com/mysuperai/what-is-named-entity-recognition-ner-and-how-can-i-use-it-2b68cf6f545d" target="_blank">https://medium.com/mysuperai/what-is-named-entity-recognition-ner-and-how-can-i-use-it-2b68cf6f545d</a></li>
+        <li><a id=6 href="https://towardsdatascience.com/named-entity-recognition-with-nltk-and-spacy-8c4a7d88e7da" target="_blank">https://towardsdatascience.com/named-entity-recognition-with-nltk-and-spacy-8c4a7d88e7da</a></li>
+        <li><a id=7 href="https://www.scaler.com/topics/nlp/name-entity-recognition-nlp/" target="_blank">https://www.scaler.com/topics/nlp/name-entity-recognition-nlp/</a></li>
+    </ol>
+	<h3>Contributed by:</h3>
+	<ul>
+		<li><a href="https://github.com/SaThorat" target="_blank">Dr. Sandeep Thorat</a></li>
+		<li><a href="https://github.com/Aishwarya-Kotkar" target="_blank">Ms. Aishwarya Kotkar</a></li>
+	</ul>
+	<p style="text-align: end; color: black; font-size: large;"><a href="textMining.html">Go back</a></p>
+</body>
+</html>
